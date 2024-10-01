@@ -1,0 +1,115 @@
+.gllink {
+    text-decoration: none;
+    color: black;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 60px; /* Wysokość paska */
+}
+
+.stopka {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #eeecec;
+
+    text-align: center;
+    line-height: 60px;
+}
+main {
+    margin-top: 50px;
+    background-image: url('./tło4.jpg');
+    background-size: cover; /* dostosowuje rozmiar tła do wielkości sekcji */
+    background-position: center; /* ustawia pozycję tła na środek sekcji */
+    background-repeat: repeat; /* zapobiega powtarzaniu tła */
+    /* opcjonalnie, ustawia wysokość sekcji na 100% widoku okna przeglądarki */
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1; 
+
+}
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 1;
+    z-index: 2; 
+
+}
+
+.gallery-item:hover {
+    transform: scale(1.2);
+    z-index: 2; 
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.gallery-item.clicked {
+    transform: scale(2.6); /* Zwiększa obraz o 20% po kliknięciu */
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+.cennik {
+    border-bottom: 2px solid rgb(251, 250, 250);
+    border-top: 2px solid rgb(254, 253, 253);
+    background-color: rgb(223, 231, 231);
+}
+h1 {
+       
+    margin-top: 80PX;
+}
+
+
+    .guzik:hover {
+        background-color: #0056b3;
+    }
+
+    .guzik {
+        width: 100%;
+        background-color: darkblue;
+        margin-bottom: 10px;
+        color: aliceblue;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+    .gllink {
+        text-decoration: none;
+    }

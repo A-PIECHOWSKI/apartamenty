@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APARTAMENT RYCERSKA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="formularz.css">
+</head>
+<body>
+  <nav>
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="strona2.html"> AP ARTMENTS </a><p><a class="gllink" href="strona2.html">APARTAMENTY WAŁBRZYCH</a></p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">APARTAMENTY WAŁBRZYCH MENU</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">LOKALIZACJA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">REZERWACJA</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  APARTAMENTY
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">APARTAMENT GDAŃSKA</a></li>
+                  <li><a class="dropdown-item" href="rycerska.html">APARTAMENT RYCERSKA</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">ATRAKCJE W OKOLICY</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="SZUKAJ" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+        <form action="scrypt3.php" method="post">
+            <fieldset class="pole1">
+                <legend>Dane do rezerwacji</legend>
+        
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="imie">Imie</label>
+                        <input 
+                           id="imie"
+                           name="imie"
+                           type="text"
+                           pattern="([A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]{2,15})*"
+                           placeholder="Imie"
+                           required
+                           aria-required="true"
+                           />
+                    </div>
+                    <div class="input-group">
+                        <label for="nazwisko">Nazwisko</label>
+                        <input 
+                           id="nazwisko"
+                           name="nazwisko"
+                           type="text"
+                           pattern="([A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]{2,15})*"
+                           placeholder="Nazwisko"
+                           required
+                           aria-required="true"
+                           />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Adres e-mail</label>
+                        <input 
+                           id="email"
+                           name="email"
+                           type="email"
+                           placeholder="email@wp.pl"
+                           required
+                           aria-required="true"
+                           />
+                    </div>
+                    <div class="input-group">
+                        <label for="tel">Nr telefonu</label>
+                        <input 
+                           id="tel"
+                           name="tel"
+                           type="tel"
+                           pattern="[0-9]{9}"
+                           placeholder="555555555"
+                           required
+                           aria-required="true"
+                           />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="pole2">
+                <legend>Apartament</legend>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="Wybór Apartamentu">Wybierz apartament:</label>
+                        <select id="wybór Apartamentu" name="wyborApartamentu">
+                           <option name="gdanska" value="gdanska">Apartament Gdańska</option>
+                           <option name="rycerska" value="rycerska">Apartament Rycerska</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="data_przyjazdu">Data przyjazdu:</label>
+                        <input type="date" id="dataprzyjazdu" name="dataprzyjazdu">
+                    </div>
+                    <div class="input-group">
+                        <label for="datawyjazdu">Data wyjazdu:</label>
+                        <input type="date" id="datawyjazdu" name="datawyjazdu">
+                    </div>
+                    <div class="input-group">
+                        <label for="liczbaGosci">Liczba gości do:</label>
+                        <select id="liczbaGosci" onchange="obliczCene()">
+                           <option value="2">2</option>
+                           <option value="4">4</option>
+                           <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+                <p id="wynikCeny">Cena: 399 zł</p>
+                <input type="submit" value="REZERWUJE">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="content">
+            
+        </div>
+        <div class="stopka">
+            <!-- Zawartość stopki -->
+            kontakt tel 555 555 555 lub  email apapartments@.wp.pl
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function obliczCene() {
+            var liczbaGosci = document.getElementById("liczbaGosci").value;
+            var cena;
+
+            switch (liczbaGosci) {
+                case "2":
+                    cena = 399;
+                    break;
+                case "4":
+                    cena = 499;
+                    break;
+                case "6":
+                    cena = 599;
+                    break;
+                default:
+                    cena = 0;
+            }
+
+            document.getElementById("wynikCeny").innerHTML = "Cena: " + cena + " zł";
+        }
+    </script>
+</html> 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="./logo ap 2.jpg" alt="logo">
+        <form>
+            <input class="wyszukiwarka"   placeholder="SZUKAJ">
+            
+        </form>
+        <ul class="active">
+            <li><a href="#">LOKALIZACJA</a></li>
+            <li><a href="#">APARTAMENTY</a></li>
+            <li><a href="#">REZERWACJA</a></li>
+            <li><a href="#">ATRAKCJE</a></li>
+        </ul>
+
+        <button class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <script> 
+            const mobileNav = document.querySelector('ul');
+            const burgerIcon = document.querySelector('.burger');
+
+            burgerIcon.addEventListener('click',function(){
+            mobileNav.classList.toggle('active');
+            burgerIcon.classList.toggle('active');
+            })
+        </script>
+    </nav>
+    <main>
+        <div class="contenerxl">
+        <div class="contenerJPG1">
+        <img class="zdjecie-lewe" src="./gdanska1.jpg" alt="Zdjęcie 1">
+
+        <img class="zdjecie-prawe-gorne" src="./gdanska2.jpg" alt="Zdjęcie 2">
+
+        <img class="zdjecie-prawe-dolne" src="./gdanska3.jpg" alt="Zdjęcie 3">
+        <div class="opis1">
+        <p class="napis1">AP APARTMENTS - Apartament Rycerska</p>
+
+        </div>
+        <div class="contenerJPG2">
+         <img class="zdjecie-lewe" src="./RYCERSKA1.jpg" alt="Zdjęcie 1">
+
+        <img class="zdjecie-prawe-gorne" src="./RYCERSKA2.jpg" alt="Zdjęcie 2">
+
+        <img class="zdjecie-prawe-dolne" src="./RYCERSKA3.jpg" alt="Zdjęcie 3">
+
+        </div>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+    
+   /* height: 750px;/*
+    width: 850px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    max-height: 750px;/*
+
+}
+/* Zmniejszenie wysokości karuzeli */
+
+@media (min-width: 1200px) {
+        body {
+            max-width: 100%; /* Zdjęcia zajmą maksymalnie dostępną szerokość kontenera */
+            height: auto;
+            margin: 40px; /* Automatyczne dostosowanie wysokości do zachowania proporcji */
+        }
+    }
+    
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.cennik {
+    border-bottom: 3px solid rgb(174, 173, 173);
+    border-top: 3px solid rgb(174, 173, 173);
+}
+
+
+.stacjaopis {
+    display: block;
+    font-size: larger; 
+}
+.stacjajpg {
+    width: 100%;
+    height: auto;
+}
+
+
+.gold-frame {
+    border: 10px solid #c3a91b; /* Kolor złotej ramki */
+    padding: 20px; /* Wewnętrzny odstęp od ramki */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Cień ramki */
+}
+
+.gold-frame .stacjajpg {
+    width: 100%; /* Obraz wypełnia całą przestrzeń wewnątrz ramki */
+    height: auto; /* Zachowaj proporcje obrazu */
+    display: block;
+}
+header {
+    background-color: rgb(234, 234, 234);
+    margin-top: 60px;
+}
+.gllink {
+    text-decoration: none;
+    color: black;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 60px; /* Wysokość paska */
+}
+
+.stopka {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #eeecec;
+
+    text-align: center;
+    line-height: 60px;
+}
+.guzik {
+    width: 100%;
+    background-color: darkblue;
+    margin-bottom: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+
+}

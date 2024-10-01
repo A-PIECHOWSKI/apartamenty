@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartament Gdańska wałbrzych</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="gdanska.css">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="index.html"> AP ARTMENTS </a><p><a class="gllink" href="index.html">APARTAMENTY WAŁBRZYCH</p></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">APARTAMENTY WAŁBRZYCH MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">LOKALIZACJA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">REZERWACJA</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    APARTAMENTY
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">APARTAMENT GDAŃSKA</a></li>
+                    <li><a class="dropdown-item" href="rycerska.html">APARTAMENT RYCERSKA</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="https://www.polskieszlaki.pl/walbrzych-atrakcje/">ATRAKCJE W OKOLICY</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="SZUKAJ" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </nav>
+</div>
+<header>
+    <h1>APARTAMENT GDAŃSKA</h1>
+    <h2>
+      <details class="cennik">
+        <summary>Cena 1 doby dla 2 lub 1 osób.</summary>
+        <p>399 zł za dobe</p>
+      </details>
+      <details class="cennik">
+        <summary>Cena 1 doby dla 4 osób.</summary>
+        <p>499 zł za dobe </p>
+      </details class="cennik">
+      <details>
+        <summary class="cennik">Cena 1 doby dla 5 lub 6 osób.</summary>
+        <p>599 zł </p>
+      </details>
+    
+    </h2>
+</header>
+<main>
+    <div class="gallery">
+        <div class="gallery-item" onclick="toggleImageSize(this)">
+            <img src="./gdasal.jpg" alt="Image 1">
+            <div class="image-description">DUŻY SALON Z W PEŁNI WYPOSARZONYM ANEKSEM KUCHENNYM</div>
+        </div>
+        <div class="gallery-item" onclick="toggleImageSize(this)" >
+            <img src="./gdasofa.jpg"  alt="Image 2">
+            <div class="image-description">WYGODNY DUŻY SALON Z ROSKŁADANĄ SOFĄ </div>
+        </div>
+        <div class="gallery-item" onclick="toggleImageSize(this)">
+            <img src="./gdasyp1.jpg" alt="Image 3">
+            <div class="image-description">SYPIALNIA MAŁŻENSKA Z DUŻĄ SZAFĄ</div>
+        </div>
+        <div class="gallery-item"  onclick="toggleImageSize(this)" >
+            <img src="./gdasyp2.jpg"  alt="Image 4">
+            <div class="image-description">SYPIALNIA Z 2 OSOBNYMI ŁÓZKAMI</div>
+        </div>
+        <div class="gallery-item" onclick="toggleImageSize(this)">
+            <img src="./gdanska1.jpg" alt="Image 5">
+            <div class="image-description">DUŻA ELEGANCKA ŁĄZIENKA</div>
+        </div>
+        <div class="gallery-item" onclick="toggleImageSize(this)">
+            <img src="gdasal2.jpg" alt="Image 6">
+            <div class="image-description">JADALNIA ZAPRASZA NA RODZINNE POSIŁKI</div>
+        </div>
+    </div>
+
+
+</main>
+<a href="formularz.html"><input type="button" class="guzik" value="REZERWACJA"></a>
+<footer>
+<div class="wrap">
+  <div class="content">
+      
+  </div>
+  <div class="stopka">
+      <!-- Zawartość stopki -->
+      kontakt tel 555 555 555 lub  email apapartments@.wp.pl
+  </div>
+</div>
+</footer>
+<script>
+  function toggleImageSize(element) {
+      element.classList.toggle('clicked');
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
